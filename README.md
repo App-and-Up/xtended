@@ -83,8 +83,16 @@ A wrapper around GridView, that provides sensible defaults, we expect you to jus
 
 ## Usage
 
+### Installing
+```bash
+flutter pub add xtended
+```
+
+
+### Importing
+
 ```dart
-import 'package:flutterui/flutterui.dart';
+import 'package:xtended/xtended.dart';
 ```
 
 and then use any of the extensions or widgets.
