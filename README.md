@@ -1,4 +1,4 @@
-FlutterUI is a collection of Widgets and extension methods that improve the way we construct widget trees in Flutter.
+Xtended is a collection of Widgets and extension methods that improve the way we construct widget trees in Flutter.
 
 ## Vision and Inspiration
 This was started by @dancamdev while trying to get closer to SwiftUI modifiers syntax in Flutter.
