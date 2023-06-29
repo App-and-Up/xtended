@@ -1,7 +1,8 @@
 name: xtended
 description: A collection of Widgets and extensions that make building UI awesome.
 version: 0.1.0
-homepage:
+homepage: https://appandup.app/
+repository: https://github.com/App-and-Up/xtended
 
 environment:
   sdk: '>=3.0.3 <4.0.0'
