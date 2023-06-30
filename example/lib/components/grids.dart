@@ -19,9 +19,7 @@ class Grids extends StatelessWidget {
           for (final index in getSamples(10)) _GridItem(index: index),
         ]),
       ),
-
       const SizedBox(height: 32),
-
       const Text('Grid Horizontal').fontSize(24).bold(),
       const Text(
           'Children are shown on a horizontal grid. Matches the height and width of the parent and scales the children bases on the rows.'),
@@ -37,7 +35,7 @@ class Grids extends StatelessWidget {
 }
 
 class _GridItem extends StatelessWidget {
-  const _GridItem({super.key, required this.index});
+  const _GridItem({required this.index});
 
   final int index;
 

@@ -145,19 +145,19 @@ class HStack extends StatelessWidget {
   final MainAxisAlignment alignment;
 
   /// Creates a [HStack] widget that expands to fill the available space.
-  /// 
+  ///
   /// Children are stacked horizontally in the order in which they are added.
-  /// 
+  ///
   /// HStack width matches the width of its parent.
-  /// 
+  ///
   /// Example:
-  /// 
+  ///
   /// ```dart
   /// HStack.expanded([
   ///   Text('Hello'),
   ///   Text('World'),
   /// ])
-  /// 
+  ///
   static Widget expanded(
     List<Widget> children, {
     MainAxisAlignment alignment = MainAxisAlignment.start,
@@ -170,20 +170,20 @@ class HStack extends StatelessWidget {
   }
 
   /// Creates a [HStack] widget that is scrollable.
-  /// 
+  ///
   /// Children are stacked horizontally in the order in which they are added.
-  /// 
+  ///
   /// HStack width matches the width of its parent. If the children exceed
   /// the width of the parent, the HStack becomes scrollable.
-  /// 
+  ///
   /// Example:
-  /// 
+  ///
   /// ```dart
   /// HStack.scrollable([
   ///   Text('Hello'),
   ///   Text('World'),
   /// ])
-  /// 
+  ///
   static Widget scrollable(
     List<Widget> children, {
     MainAxisAlignment alignment = MainAxisAlignment.start,

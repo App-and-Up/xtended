@@ -16,9 +16,7 @@ class Stacks extends StatelessWidget {
       VStack([
         for (final index in getSamples(5)) _StackItem(index: index),
       ]),
-
       const SizedBox(height: 32),
-
       const Text('VStack Expanded').fontSize(24).bold(),
       const Text(
           'Children are stacked vertically. VStack height matches the height of its parent.'),
@@ -30,9 +28,7 @@ class Stacks extends StatelessWidget {
           for (final index in getSamples(5)) _StackItem(index: index),
         ]),
       ),
-
       const SizedBox(height: 32),
-
       const Text('VStack Scrollable').fontSize(24).bold(),
       const Text(
           'Children are stacked vertically. VStack height matches the height of its parent. If the children exceed the height of the parent, the VStack becomes scrollable.'),
@@ -44,9 +40,7 @@ class Stacks extends StatelessWidget {
           for (final index in getSamples(30)) _StackItem(index: index),
         ]),
       ),
-
       const SizedBox(height: 32),
-
       const Text('HStack').fontSize(24).bold(),
       const Text(
           'Children are stacked horizontally. HStack width matches the width of the children.'),
@@ -54,9 +48,7 @@ class Stacks extends StatelessWidget {
       HStack([
         for (final index in getSamples(5)) _StackItem(index: index),
       ]),
-
       const SizedBox(height: 32),
-
       const Text('HStack Expanded').fontSize(24).bold(),
       const Text(
           'Children are stacked horizontally. HStack width matches the width of its parent.'),
@@ -68,9 +60,7 @@ class Stacks extends StatelessWidget {
           for (final index in getSamples(5)) _StackItem(index: index),
         ]),
       ),
-
       const SizedBox(height: 32),
-
       const Text('HStack Scrollable').fontSize(24).bold(),
       const Text(
           'Children are stacked horizontally. HStack width matches the width of its parent. If the children exceed the width of the parent, the HStack becomes scrollable.'),
@@ -87,7 +77,7 @@ class Stacks extends StatelessWidget {
 }
 
 class _StackItem extends StatelessWidget {
-  const _StackItem({super.key, required this.index});
+  const _StackItem({required this.index});
 
   final int index;
 

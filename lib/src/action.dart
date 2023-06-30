@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 /// A set of actions that can be performed on a widget.
-/// 
+///
 /// This enum is used by the [action] extension on [Widget].
 enum Action {
   /// A tap action.

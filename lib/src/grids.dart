@@ -37,7 +37,7 @@ class Grid extends StatelessWidget {
   ///   Text('Hello World'),
   /// ])
   /// ```
-  /// 
+  ///
   /// You can also optinally specify the vertical and horizontal spacing between the grid cells.
   const Grid(
     this.children, {
@@ -60,16 +60,16 @@ class Grid extends StatelessWidget {
   final double horizontalSpacing;
 
   /// Creates an horizontal grid.
-  /// 
+  ///
   /// Example - Creating a horizontal grid with 2 rows:
-  /// 
+  ///
   /// ```dart
   /// Grid.horizontal(rows: 2, [
   ///   Text('Hello World'),
   ///   Text('Hello World'),
   /// ])
   /// ```
-  /// 
+  ///
   /// You can also optinally specify the vertical and horizontal spacing between the grid cells.
   static Widget horizontal(
     List<Widget> children, {
