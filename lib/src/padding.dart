@@ -28,13 +28,13 @@ enum Edge {
   /// Converts the edge to an [EdgeInsetsGeometry] with the specified value.
   EdgeInsetsGeometry toEdgeInsets(double value) {
     return switch (this) {
-      Edge.all => EdgeInsets.all(value),
-      Edge.top => EdgeInsets.only(top: value),
-      Edge.bottom => EdgeInsets.only(bottom: value),
+      Edge.all => EdgeInsetsDirectional.all(value),
+      Edge.top => EdgeInsetsDirectional.only(top: value),
+      Edge.bottom => EdgeInsetsDirectional.only(bottom: value),
       Edge.leading => EdgeInsetsDirectional.only(start: value),
       Edge.trailing => EdgeInsetsDirectional.only(end: value),
-      Edge.horizontal => EdgeInsets.symmetric(horizontal: value),
-      Edge.vertical => EdgeInsets.symmetric(vertical: value),
+      Edge.horizontal => EdgeInsetsDirectional.symmetric(horizontal: value),
+      Edge.vertical => EdgeInsetsDirectional.symmetric(vertical: value),
     };
   }
 }
