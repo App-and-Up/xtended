@@ -6,7 +6,7 @@ class VStack extends StatelessWidget {
     this.children, {
     super.key,
     this.alignment = MainAxisAlignment.start,
-    this.horizontalAlignment = CrossAxisAlignment.center,
+    this.horizontalAlignment = CrossAxisAlignment.start,
   });
 
   final List<Widget> children;
@@ -16,7 +16,7 @@ class VStack extends StatelessWidget {
   static Widget expanded(
     List<Widget> children, {
     MainAxisAlignment alignment = MainAxisAlignment.start,
-    CrossAxisAlignment horizontalAlignment = CrossAxisAlignment.center,
+    CrossAxisAlignment horizontalAlignment = CrossAxisAlignment.start,
   }) {
     return SafeArea(
       child: Column(
@@ -31,7 +31,7 @@ class VStack extends StatelessWidget {
   static Widget scrollable(
     List<Widget> children, {
     MainAxisAlignment alignment = MainAxisAlignment.start,
-    CrossAxisAlignment horizontalAlignment = CrossAxisAlignment.center,
+    CrossAxisAlignment horizontalAlignment = CrossAxisAlignment.start,
   }) {
     return SafeArea(
       child: SingleChildScrollView(
