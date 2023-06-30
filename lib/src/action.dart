@@ -4,8 +4,13 @@ import 'package:flutter/widgets.dart';
 /// 
 /// This enum is used by the [action] extension on [Widget].
 enum Action {
+  /// A tap action.
   tap,
+
+  /// A double tap action.
   doubleTap,
+
+  /// A long press action.
   longPress;
 
   /// Converts the action to a [GestureDetector] with the specified action.
@@ -18,6 +23,7 @@ enum Action {
   }
 }
 
+/// An extension on [Widget] that adds the ability to perform actions on it.
 extension ActionXtended on Widget {
   /// An extension on [Widget] that adds the ability to perform actions on it.
   ///

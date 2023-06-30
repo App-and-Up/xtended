@@ -1,7 +1,24 @@
 import 'package:flutter/widgets.dart';
-import 'package:xtended/src/padding.dart';
 
+/// A widget that displays its children in a vertical stack.
+///
+/// The [VStack] widget is a wrapper around the [Column] widget with
+/// some additional functionality and sensible defaults.
 class VStack extends StatelessWidget {
+  /// Creates a [VStack] widget.
+  ///
+  /// Children are stacked vertically in the order in which they are added.
+  ///
+  /// VStack height matches the height of its children.
+  ///
+  /// Example:
+  ///
+  /// ```dart
+  /// VStack([
+  ///   Text('Hello'),
+  ///   Text('World'),
+  /// ])
+  ///
   const VStack(
     this.children, {
     super.key,
@@ -9,10 +26,33 @@ class VStack extends StatelessWidget {
     this.horizontalAlignment = CrossAxisAlignment.start,
   });
 
+  /// The widgets that get shown within the VStack.
   final List<Widget> children;
+
+  /// How the children should be placed along the vertical axis.
+  ///
+  /// Defaults to [MainAxisAlignment.start].
   final MainAxisAlignment alignment;
+
+  /// How the children should be placed along the horizontal axis.
+  ///
+  /// Defaults to [CrossAxisAlignment.start].
   final CrossAxisAlignment horizontalAlignment;
 
+  /// Creates a [VStack] widget that expands to fill the available space.
+  ///
+  /// Children are stacked vertically in the order in which they are added.
+  ///
+  /// VStack height matches the height of its parent.
+  ///
+  /// Example:
+  ///
+  /// ```dart
+  /// VStack.expanded([
+  ///   Text('Hello'),
+  ///   Text('World'),
+  /// ])
+  ///
   static Widget expanded(
     List<Widget> children, {
     MainAxisAlignment alignment = MainAxisAlignment.start,
@@ -28,6 +68,21 @@ class VStack extends StatelessWidget {
     );
   }
 
+  /// Creates a [VStack] widget that is scrollable.
+  ///
+  /// Children are stacked vertically in the order in which they are added.
+  ///
+  /// VStack height matches the height of its parent. If the children exceed
+  /// the height of the parent, the VStack becomes scrollable.
+  ///
+  /// Example:
+  ///
+  /// ```dart
+  /// VStack.scrollable([
+  ///   Text('Hello'),
+  ///   Text('World'),
+  /// ])
+  ///
   static Widget scrollable(
     List<Widget> children, {
     MainAxisAlignment alignment = MainAxisAlignment.start,
@@ -56,18 +111,57 @@ class VStack extends StatelessWidget {
   }
 }
 
+/// A widget that displays its children in an horizontal stack.
+///
+/// The [HStack] widget is a wrapper around the [Row] widget with
+/// some additional functionality and sensible defaults.
 class HStack extends StatelessWidget {
+  /// Creates a [HStack] widget.
+  ///
+  /// Children are stacked horizontally in the order in which they are added.
+  ///
+  /// HStack width matches the width of its children.
+  ///
+  /// Example:
+  ///
+  /// ```dart
+  /// HStack([
+  ///   Text('Hello'),
+  ///   Text('World'),
+  /// ])
+  ///
   const HStack(
     this.children, {
     super.key,
     this.alignment = MainAxisAlignment.start,
   });
 
+  /// The widgets that get shown within the HStack.
   final List<Widget> children;
+
+  /// How the children should be placed along the horizontal axis.
+  ///
+  /// Defaults to [MainAxisAlignment.start].
   final MainAxisAlignment alignment;
 
-  static expanded(List<Widget> children,
-      {MainAxisAlignment alignment = MainAxisAlignment.start}) {
+  /// Creates a [HStack] widget that expands to fill the available space.
+  /// 
+  /// Children are stacked horizontally in the order in which they are added.
+  /// 
+  /// HStack width matches the width of its parent.
+  /// 
+  /// Example:
+  /// 
+  /// ```dart
+  /// HStack.expanded([
+  ///   Text('Hello'),
+  ///   Text('World'),
+  /// ])
+  /// 
+  static Widget expanded(
+    List<Widget> children, {
+    MainAxisAlignment alignment = MainAxisAlignment.start,
+  }) {
     return Row(
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: alignment,
@@ -75,6 +169,21 @@ class HStack extends StatelessWidget {
     );
   }
 
+  /// Creates a [HStack] widget that is scrollable.
+  /// 
+  /// Children are stacked horizontally in the order in which they are added.
+  /// 
+  /// HStack width matches the width of its parent. If the children exceed
+  /// the width of the parent, the HStack becomes scrollable.
+  /// 
+  /// Example:
+  /// 
+  /// ```dart
+  /// HStack.scrollable([
+  ///   Text('Hello'),
+  ///   Text('World'),
+  /// ])
+  /// 
   static Widget scrollable(
     List<Widget> children, {
     MainAxisAlignment alignment = MainAxisAlignment.start,
@@ -99,30 +208,6 @@ class HStack extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: alignment,
       children: children,
-    );
-  }
-}
-
-// This is needed because Column and Row are not subclasses of Widget
-// they extend Flex instead
-extension HStackX on HStack {
-  Widget padding(List<Edge> edges, double value) {
-    return Padding(
-      padding: edges.fold(EdgeInsets.zero, (previousValue, element) {
-        return previousValue.add(element.toEdgeInsets(value));
-      }),
-      child: this,
-    );
-  }
-}
-
-extension VStackX on VStack {
-  Widget padding(List<Edge> edges, double value) {
-    return Padding(
-      padding: edges.fold(EdgeInsets.zero, (previousValue, element) {
-        return previousValue.add(element.toEdgeInsets(value));
-      }),
-      child: this,
     );
   }
 }
