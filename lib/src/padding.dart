@@ -31,8 +31,8 @@ enum Edge {
       Edge.all => EdgeInsets.all(value),
       Edge.top => EdgeInsets.only(top: value),
       Edge.bottom => EdgeInsets.only(bottom: value),
-      Edge.leading => EdgeInsets.only(left: value),
-      Edge.trailing => EdgeInsets.only(right: value),
+      Edge.leading => EdgeInsetsDirectional.only(start: value),
+      Edge.trailing => EdgeInsetsDirectional.only(end: value),
       Edge.horizontal => EdgeInsets.symmetric(horizontal: value),
       Edge.vertical => EdgeInsets.symmetric(vertical: value),
     };
