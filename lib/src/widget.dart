@@ -54,7 +54,7 @@ extension WidgetXtended on Widget {
   /// Text('Hello').align(Alignment.bottomRight)
   /// ```
   ///
-  Widget align([Alignment alignment = Alignment.topLeft]) => Align(
+  Widget align([AlignmentDirectional alignment = AlignmentDirectional.topStart]) => Align(
         alignment: alignment,
         child: this,
       );
