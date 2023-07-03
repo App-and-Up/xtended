@@ -36,6 +36,17 @@ class More extends StatelessWidget {
             () => showSnackBar(context, 'Long pressed!'),
             Action.longPress,
           ),
+      const SizedBox(height: 32),
+      const Text('Suspense').fontSize(24).bold(),
+      const Text(
+        'Suspense allows you to specify a fallback widget while you wait for an async operation to complete.',
+      ),
+      const SizedBox(height: 16),
+      Suspense<String>(
+        future: Future.delayed(const Duration(seconds: 2), () => 'Suspense is awesome!'),
+        fallback: const CircularProgressIndicator(),
+        builder: (data) => SizedBox(child: Text(data ?? '')),
+      ),
     ]).padding([Edge.all], 16);
   }
 }

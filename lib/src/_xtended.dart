@@ -4,3 +4,4 @@ export 'widget.dart';
 export 'text.dart';
 export 'stacks.dart';
 export 'grids.dart';
+export 'suspense.dart';
