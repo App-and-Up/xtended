@@ -1,3 +1,6 @@
+## 0.1.2
+- Adds `.opacity` to Widget
+
 ## 0.1.1
 - Added example app
 - Added docs 
