@@ -54,7 +54,9 @@ extension WidgetXtended on Widget {
   /// Text('Hello').align(Alignment.bottomRight)
   /// ```
   ///
-  Widget align([AlignmentDirectional alignment = AlignmentDirectional.topStart]) => Align(
+  Widget align(
+          [AlignmentDirectional alignment = AlignmentDirectional.topStart]) =>
+      Align(
         alignment: alignment,
         child: this,
       );
@@ -69,6 +71,21 @@ extension WidgetXtended on Widget {
   ///
   Widget offset({double? x, double? y}) => Transform.translate(
         offset: Offset(x ?? 0, y ?? 0),
+        child: this,
+      );
+
+  /// Add opacity to the widget.
+  ///
+  /// Example:
+  ///
+  /// Appply 50% opacity to the [Text] widget.
+  /// ```dart
+  /// Text('Hello World').opacity(0.5)
+  /// ```
+  Widget opacity(double opacity, {bool alwaysIncludeSemantics = false}) =>
+      Opacity(
+        opacity: opacity,
+        alwaysIncludeSemantics: alwaysIncludeSemantics,
         child: this,
       );
 }
