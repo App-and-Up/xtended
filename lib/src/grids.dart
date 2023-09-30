@@ -45,6 +45,7 @@ class Grid extends StatelessWidget {
     this.columns = 2,
     this.verticalSpacing = 4,
     this.horizontalSpacing = 4,
+    this.aspectRatio = 1,
   });
 
   /// A list of widgets to display in the grid.
@@ -58,6 +59,11 @@ class Grid extends StatelessWidget {
 
   /// The horizontal spacing between the grid cells.
   final double horizontalSpacing;
+
+  /// The aspect ratio of the grid cells.
+  /// Defaults to 1.
+  /// This means that the grid cells will be square.
+  final double aspectRatio;
 
   /// Creates an horizontal grid.
   ///
@@ -76,6 +82,7 @@ class Grid extends StatelessWidget {
     int rows = 2,
     double verticalSpacing = 4,
     double horizontalSpacing = 4,
+    double aspectRatio = 1,
   }) {
     return GridView(
       scrollDirection: Axis.horizontal,
@@ -83,6 +90,7 @@ class Grid extends StatelessWidget {
         crossAxisCount: rows,
         mainAxisSpacing: verticalSpacing,
         crossAxisSpacing: horizontalSpacing,
+        childAspectRatio: aspectRatio,
       ),
       children: children,
     );
@@ -95,6 +103,7 @@ class Grid extends StatelessWidget {
         crossAxisCount: columns,
         mainAxisSpacing: verticalSpacing,
         crossAxisSpacing: horizontalSpacing,
+        childAspectRatio: aspectRatio,
       ),
       children: children,
     );
