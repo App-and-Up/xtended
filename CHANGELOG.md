@@ -1,3 +1,6 @@
+## 0.1.5
+- Fixes `verticalAlignment` not being passed to HStack default constructor.
+
 ## 0.1.4
 - Fixes `verticalAlignment` property for HStack and makes it consistent among all constructors
 
