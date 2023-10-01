@@ -215,6 +215,7 @@ class HStack extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: alignment,
+      crossAxisAlignment: verticalAlignment,
       children: children,
     );
   }
