@@ -134,6 +134,7 @@ class HStack extends StatelessWidget {
     this.children, {
     super.key,
     this.alignment = MainAxisAlignment.start,
+    this.verticalAlignment = CrossAxisAlignment.center,
   });
 
   /// The widgets that get shown within the HStack.
@@ -143,6 +144,11 @@ class HStack extends StatelessWidget {
   ///
   /// Defaults to [MainAxisAlignment.start].
   final MainAxisAlignment alignment;
+
+  /// How the children should be placed along the vertical axis.
+  ///
+  /// Defaults to [CrossAxisAlignment.center].
+  final CrossAxisAlignment verticalAlignment;
 
   /// Creates a [HStack] widget that expands to fill the available space.
   ///
@@ -161,10 +167,12 @@ class HStack extends StatelessWidget {
   static Widget expanded(
     List<Widget> children, {
     MainAxisAlignment alignment = MainAxisAlignment.start,
+    CrossAxisAlignment verticalAlignment = CrossAxisAlignment.center,
   }) {
     return Row(
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: alignment,
+      crossAxisAlignment: verticalAlignment,
       children: children,
     );
   }
@@ -187,7 +195,7 @@ class HStack extends StatelessWidget {
   static Widget scrollable(
     List<Widget> children, {
     MainAxisAlignment alignment = MainAxisAlignment.start,
-    CrossAxisAlignment horizontalAlignment = CrossAxisAlignment.center,
+    CrossAxisAlignment verticalAlignment = CrossAxisAlignment.center,
   }) {
     return SafeArea(
       child: SingleChildScrollView(
@@ -195,7 +203,7 @@ class HStack extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: alignment,
-          crossAxisAlignment: horizontalAlignment,
+          crossAxisAlignment: verticalAlignment,
           children: children,
         ),
       ),

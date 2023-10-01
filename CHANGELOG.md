@@ -1,3 +1,6 @@
+## 0.1.4
+- Fixes `verticalAlignment` property for HStack and makes it consistent among all constructors
+
 ## 0.1.3
 - Adds `aspectRatio` property to Grid
 
